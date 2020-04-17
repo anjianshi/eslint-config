@@ -86,3 +86,27 @@ Webpack 里配置了 resolve alias 时，ESLint 里也需要相应配置才能�
   ],
 }
 ```
+
+三、设置 ESLint workingDirectories（可选）
+若 VSCode 的 workspace 配置成类似如下目录结构：
+```js
+projects/     // /Users/me/office/projects/
+  proj-1/
+  proj-2/
+  ...
+
+library/      // /Users/me/library/
+  lib-1/
+  lib-2/
+```
+也就是，workspace 下添加了多个独立的文件夹，每个独立文件夹下又有多个项目。
+在开发这些项目（`proj-1`、`lib-1`...）时，ESLint 默认会把顶层目录作为 `workingDirectory`，从那个目录下加载插件等依赖，导致找不到依赖。
+此时我们可以在这些顶层目录下创建一个 `.vscode/setting.json` 文件，写入如下内容：
+```json
+{
+  "eslint.workingDirectories": [
+    { "mode": "auto" }
+  ]
+}
+```
+这样 ESLint 会改为把 `package.json` 存在的目录作为 `workingDirectory`，也就能正常引入依赖了。
