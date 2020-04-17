@@ -1,6 +1,6 @@
 {
   "name": "@anjianshi/eslint-config",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "公共 ESLint rules",
   "homepage": "https://github.com/anjianshi/eslint-config.git",
   "repository": "https://github.com/anjianshi/eslint-config.git",
@@ -18,5 +18,8 @@
   "peerDependencies": {
     "eslint": "^6.8.0",
     "typescript": "^3.8.3"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
