@@ -1,6 +1,6 @@
 {
   "name": "@anjianshi/eslint-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "公共 ESLint rules",
   "homepage": "https://github.com/anjianshi/eslint-config.git",
   "repository": "https://github.com/anjianshi/eslint-config.git",

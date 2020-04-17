@@ -36,6 +36,7 @@ module.exports = {
         '@typescript-eslint/no-extra-parens': ['error', 'all', {
           nestedBinaryExpressions: false,
           ignoreJSX: 'multi-line',
+          enforceForArrowConditionals: false,
         }],
         '@typescript-eslint/no-useless-constructor': 'error',
         '@typescript-eslint/quotes': ['error', 'single'],
