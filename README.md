@@ -2,10 +2,10 @@
 
 Rules 文件及依赖关系：
 ```
-base         基础 JavaScript 语法规则
-typescript   TypeScript 规则
-react        React App 规则（包含 base 和 typescript）
-node         Node.js 环境下的规则（包含 base）
+base             基础 JavaScript 语法规则
+typescript       TypeScript 规则
+react            React App 规则（包含 base 和 typescript）
+node             Node.js 环境下的规则（包含 base）
 node-typescript  Node.js 环境下书写 TypeScript 的规则（包含 base、node 和 typescript）
 ```
 

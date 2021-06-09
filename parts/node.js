@@ -3,9 +3,9 @@ module.exports = {
     node: true,
   },
   rules: {
-    'no-console': 'off',
-    'import/no-dynamic-require': 'off',
-    'no-restricted-syntax': 'off',
     'global-require': 'off',
+    'import/no-dynamic-require': 'off',
+    'no-console': 'off',
+    'no-restricted-syntax': 'off',
   }
 }
