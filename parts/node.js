@@ -1,6 +1,7 @@
 module.exports = {
   env: {
     node: true,
+    es6: true
   },
   rules: {
     'global-require': 'off',

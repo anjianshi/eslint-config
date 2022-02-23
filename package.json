@@ -1,6 +1,6 @@
 {
   "name": "@anjianshi/eslint-config",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "公共 ESLint rules",
   "homepage": "https://github.com/anjianshi/eslint-config.git",
   "repository": "https://github.com/anjianshi/eslint-config.git",
@@ -8,17 +8,24 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "@babel/eslint-parser": "^7.14.4",
-    "@typescript-eslint/eslint-plugin": "^4.26.1",
-    "@typescript-eslint/parser": "^4.26.1",
-    "eslint-import-resolver-webpack": "^0.13.1",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
   },
   "peerDependencies": {
-    "eslint": "^7.28.0",
-    "typescript": "^4.3.2"
+    "eslint": "^8.9.0",
+    "typescript": "^4.5.5"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
