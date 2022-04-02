@@ -1,6 +1,7 @@
 const rules = {
   'import/default': 'off',      // TypeScript 会自行检查这一项
   'default-case': 'off',        // 交给 @typescript-eslint/switch-exhaustiveness-check 规则来检查 switch
+  'no-void': 'off',                // typescript 里 void 符号另有用途
 
 
   // Supported Rules
@@ -10,7 +11,7 @@ const rules = {
   '@typescript-eslint/class-literal-property-style': 'off',
   '@typescript-eslint/consistent-indexed-object-style': 'off',
   '@typescript-eslint/consistent-type-assertions': 'error',
-  '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+  '@typescript-eslint/consistent-type-definitions': 'off',      // 这条规则未能覆盖所有情况。有些时候必须用 type，不能用 interface，但它识别不出来。
   '@typescript-eslint/consistent-type-exports': ['error', { fixMixedExportsWithInlineTypeSpecifier: true }],
   '@typescript-eslint/consistent-type-imports': 'error',
   '@typescript-eslint/explicit-function-return-type': 'off',
@@ -30,11 +31,11 @@ const rules = {
   '@typescript-eslint/no-base-to-string': 'off',
   '@typescript-eslint/no-confusing-non-null-assertion': 'error',
   '@typescript-eslint/no-confusing-void-expression': ['error', { ignoreArrowShorthand: true, ignoreVoidOperator: true }],
-  '@typescript-eslint/no-dynamic-delete': 'error',
+  '@typescript-eslint/no-dynamic-delete': 'off',
   '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true, ignoreRestArgs: true }],
   '@typescript-eslint/no-extraneous-class': 'error',
-  '@typescript-eslint/no-invalid-void-type': 'error',
-  '@typescript-eslint/no-meaningless-void-operator': 'error',
+  '@typescript-eslint/no-invalid-void-type': 'off',               // 这条规则不能很好地覆盖所有情况，例如一个类型有个 generic type，是最终用于定义函数返回值的，本应允许是 void，但这条规则不允许
+  '@typescript-eslint/no-meaningless-void-operator': 'off',       // 这条和 no-confusing-void-expression 的规则冲突
   '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
   '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
   '@typescript-eslint/no-non-null-assertion': 'off',
@@ -121,14 +122,7 @@ const rules = {
   '@typescript-eslint/no-throw-literal': 'error',
   '@typescript-eslint/no-unused-expressions': 'error',
   '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: 'React|[iI]gnored' }],
-  '@typescript-eslint/no-use-before-define': ['error', {
-    functions: false,
-    classes: false,
-    variables: true,
-    enums: true,
-    typedefs: true,
-    ignoreTypeReferences: true,
-  }],
+  '@typescript-eslint/no-use-before-define': 'off',
   '@typescript-eslint/no-useless-constructor': 'error',
   '@typescript-eslint/object-curly-spacing': ['error', 'always'],
   '@typescript-eslint/padding-line-between-statements': 'off',
