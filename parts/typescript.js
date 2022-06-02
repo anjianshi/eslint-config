@@ -3,7 +3,6 @@ const rules = {
   'default-case': 'off',        // 交给 @typescript-eslint/switch-exhaustiveness-check 规则来检查 switch
   'no-void': 'off',                // typescript 里 void 符号另有用途
 
-
   // Supported Rules
   '@typescript-eslint/array-type': 'error',
   '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
@@ -39,7 +38,7 @@ const rules = {
   '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
   '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
   '@typescript-eslint/no-non-null-assertion': 'off',
-  '@typescript-eslint/no-parameter-properties': 'off',
+  '@typescript-eslint/parameter-properties': 'off',
   '@typescript-eslint/no-require-imports': 'off',
   '@typescript-eslint/no-this-alias': 'off',
   '@typescript-eslint/no-type-alias': 'off',
@@ -58,7 +57,7 @@ const rules = {
   '@typescript-eslint/prefer-includes': 'error',
   '@typescript-eslint/prefer-literal-enum-member': 'error',
   '@typescript-eslint/prefer-nullish-coalescing': 'error',
-  '@typescript-eslint/prefer-optional-chain': 'error',
+  '@typescript-eslint/prefer-optional-chain': 'off',    // 这条会和其他规则起冲突
   '@typescript-eslint/prefer-readonly': 'error',
   '@typescript-eslint/prefer-readonly-parameter-types': 'off',
   '@typescript-eslint/prefer-reduce-type-parameter': 'error',
@@ -73,6 +72,7 @@ const rules = {
   '@typescript-eslint/switch-exhaustiveness-check': 'error',
   '@typescript-eslint/type-annotation-spacing': 'error',
   '@typescript-eslint/typedef': 'off',
+  '@typescript-eslint/unbound-method': 'off',             // 此规则对有些情况适配的不好
   '@typescript-eslint/unified-signatures': 'error',
 
 
